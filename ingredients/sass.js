@@ -20,7 +20,7 @@ elixir.extend('sass', function(src, output, options) {
 
     options = _.extend({
         outputStyle: inProduction ? 'compressed' : 'nested',
-        includePaths: [elixir.config.bowerDir + "/bootstrap-sass-official/assets/stylesheets"]
+        includePaths: [elixir.config.bowerDir, elixir.config.bowerDir + "/bootstrap-sass-official/assets/stylesheets"]
     }, options);
 
     return compile({
